@@ -1,0 +1,11 @@
+img{
+	height: 15px;
+	margin: 5px;
+}
+img:hover{
+	cursor: pointer;
+}
+
+.title{
+	font-weight: bold;
+}
