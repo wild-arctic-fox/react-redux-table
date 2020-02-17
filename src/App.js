@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 import Table from "./components/table/Table";
 
-const App = () => {
+const App = ({store}) => {
     return (
         <div className="App">
-            <Table/>
+            <Table store={store}/>
         </div>
     );
 };
