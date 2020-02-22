@@ -14,11 +14,20 @@ const createElement = (val) => {
         9: (Math.random() * 100).toFixed(1),
     }
 };
+// initial state
 const state0 = {
     headerItems: ['Date', 'ZFT', 'Unique', 'Registrations', 'Demo registrations', 'Conversion', 'Deposit', 'Ftd', 'Deals', 'Profit'],
     items: [createElement('2009/12/12'), createElement('2010/12/12'), createElement('2011/10/01'), createElement('1999/06/08')],
     sort: true
 };
+/**
+ * Редьюсеры (reducers) — это функции, которые обрабатывают экшены и могут вносить изменения в состояние.\
+ * Редьюсер принимает текущее состояние в качестве параметра.
+ * @param state - текущее состояние
+ * @param action - Отправка экшена — это единственный способ выразить изменение состояния
+ * обязатнльное поле type - действие которое нужно совершить
+ * @return state - редьюсер всегда должен возвращать текущее состояние
+ */
 export const reducer = (state = state0, action) => {
     switch (action.type) {
         case 'SORT':
@@ -31,3 +40,11 @@ export const reducer = (state = state0, action) => {
 
     }
 };
+
+/**
+ * Обновление состояния - функция отправки действия
+ * store.dispatch({
+      type: 'TOGGLE_TODO',
+      param: 1
+    })
+ */

@@ -21,10 +21,17 @@ const Table = ({store}) => {
         </table>
     );
 };
+/**
+ * Задача венуть те свой ства которые должна получить Table
+ * @param state - получет текущий store
+ * @return {{store: *}}
+ */
 const mapStateToProps = (state) => {
     return {
         store: state
     }
 };
 
+// connect - HOC - связывает редакс и Table, берет из
+// store компоненты и передавать в Table
 export default connect(mapStateToProps)(Table);

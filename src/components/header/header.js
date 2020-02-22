@@ -30,6 +30,12 @@ const mapStateToProps = (state) => {
     }
 };
 
+/**
+ * Ключи возвращаемого обьекта это те свойства которые присваиваются обьекту Header
+ * Внутри себя вызывает dispatch - Обновление состояния
+ * @param dispatch - ф-я
+ * @return {{onSort: (function(*=): *)}}
+ */
 const mapDispatchToProps = (dispatch) => {
     return {
         onSort: (el) => dispatch(sort(el))
